@@ -1,4 +1,4 @@
-import Qt 4.7
+import QtQuick 2.0
 
 Item {
     id: button
@@ -7,7 +7,7 @@ Item {
 
     Image {
         id: shadow
-        source: (type == "default") ? ":asset/pressed.png" : ":asset/pressed-"+type+".png"
+        source: (type == "default") ? "asset/pressed.png" : "asset/pressed-"+type+".png"
         z: 1.1
         opacity: 0
         anchors.left: parent.left

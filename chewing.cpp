@@ -1,7 +1,6 @@
 #include <QApplication>
-#include <QDeclarativeView>
-#include <QDeclarativeEngine>
-#include <QDeclarativeContext>
+#include <QQuickView>
+#include <QQmlContext>
 #include <QX11Info>
 #include <QTextCodec>
 
@@ -10,6 +9,7 @@
 #include <chewing/chewingio.h>
 
 #include <fakekey/fakekey.h>
+#undef Bool
 
 class ApplicationData : public QObject
 {
@@ -77,10 +77,10 @@ public:
 
 int main(int argc, char *argv[]) {
 
-    QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
+    QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
 
     QApplication app(argc, argv);
-    QDeclarativeView view;
+    QQuickView view;
     ApplicationData data;
 
     data.fakekey = fakekey_init(QX11Info::display());

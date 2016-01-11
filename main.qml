@@ -1,5 +1,4 @@
-//import QtQuick 1.0
-import Qt 4.7
+import QtQuick 2.0
 
 Item {
     id: keyboard
@@ -40,7 +39,7 @@ Item {
         color: "transparent"
 
         Image {
-            source: ":asset/keyboard-bpmf.png"
+            source: "asset/keyboard-bpmf.png"
 
         Text { 
             id: candidate 

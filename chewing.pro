@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET = qml-chewing
 CONFIG += qt
-QT += declarative
+QT += quick x11extras widgets
 SOURCES += chewing.cpp
 
 unix {
